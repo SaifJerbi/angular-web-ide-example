@@ -1,0 +1,16 @@
+<nav class="sidebar">
+  <ul class="list-unstyled">
+    <li routerLink='home' routerLinkActive="active-link">
+      <a>
+        <i class="fa fa-home"></i>
+        <span>Home</span>
+      </a>
+    </li>
+    <li *ngFor="let plugin of plugins$ | async" title={{plugin.name}} routerLink={{plugin.path}} routerLinkActive="active-link">
+        <a>
+            <i class="fa {{plugin.icon}}"></i>
+            <div>{{plugin.name}}</div>
+        </a>
+    </li>
+  </ul>
+</nav>

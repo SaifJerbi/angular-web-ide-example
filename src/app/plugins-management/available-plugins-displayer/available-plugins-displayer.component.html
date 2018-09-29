@@ -1,0 +1,14 @@
+<div class="card card-default">
+  <div class="card-heading">Available plugins</div>
+  <div class="card-body">
+    <ul>
+      <li *ngFor="let plugin of plugins" class="plugin">
+        <div class="plugin-desc">{{plugin.name}} - {{plugin.version}}</div>
+        <div class="plugin-info">
+          <span class="plugin-action" (click)='doLoadPlugin(plugin)'> <i class="fa fa-download"></i>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

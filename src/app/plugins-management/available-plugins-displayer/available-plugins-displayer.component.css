@@ -1,0 +1,22 @@
+.card {
+  width: 30vw;
+  padding: 20px;
+}
+.plugin {
+  width: 20vw;
+}
+.plugin-desc {
+  font-size: 0.9em;
+  max-width: 15vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+.plugin-info {
+  float: right;
+}
+
+.plugin-action {
+  cursor: pointer;
+}

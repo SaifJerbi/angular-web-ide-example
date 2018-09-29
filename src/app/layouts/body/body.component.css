@@ -1,0 +1,6 @@
+:host {
+  width: calc(100vw - 100px);
+  padding: 10px;
+  margin-left: 80px;
+  position: absolute;
+}

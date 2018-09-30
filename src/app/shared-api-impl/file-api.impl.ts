@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { FileApi, IdeFile } from 'shared-api/api';
+import { IdeFile, FileApi } from 'shared-api/api';
 import { Injectable } from '@angular/core';
 
 @Injectable()

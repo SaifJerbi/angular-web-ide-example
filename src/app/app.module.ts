@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PluginsStore } from './store/plugins.store';
 import { MainComponent } from './main/main.component';
+import { FileApi } from 'shared-api/api';
+import { FileApiImpl } from './shared-api-impl/file-api.impl';
 
 const roots: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,7 +31,7 @@ const roots: Routes = [
     FooterComponent
   ],
   imports: [BrowserModule, CommonModule, RouterModule.forRoot(roots)],
-  providers: [PluginsStore],
+  providers: [PluginsStore, { provide: FileApi, useClass: FileApiImpl }],
   bootstrap: [AppComponent],
   exports: [AvailablePluginsDisplayerComponent, PluginsContainerComponent]
 })
